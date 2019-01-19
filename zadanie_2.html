@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var deposit = +prompt("Введите сумму вклада:");
+	var interest = +prompt("Введите процент по вкладу:");
+	var i = 0;
+	while (i < 5) {
+		c = deposit / 100 * interest;
+		deposit = deposit + c;
+		i++;
+		document.write("Сумма вклада в " + i + " год: " + deposit.toFixed(2) + " руб. <br />");
+	};
+</script>
