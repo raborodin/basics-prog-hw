@@ -14,6 +14,7 @@
 		};
 
 		var userAnswer = prompt(" Угадайте число от 0 до 100.");
+		userAnswer = userAnswer.toLowerCase();
 		if (userAnswer > answer) {
 			alert(" Ваш ответ слишком большой.");
 		} else if (userAnswer < answer) {
@@ -21,7 +22,7 @@
 		} else if (userAnswer == answer) {
 			alert("Вы угадали!");
 			break;
-		} else if (userAnswer == "Выход"||userAnswer == "выход"||userAnswer == "Выход") {
+		} else if (userAnswer == "выход") {
 			alert("Вы вышли из игры.");
 			break;
 		};
