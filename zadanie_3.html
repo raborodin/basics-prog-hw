@@ -1,16 +1,16 @@
 <meta charset="utf-8">
 <script type="text/javascript">
+	
 	var answer = parseInt(Math.random() * 100);
 
 	var tryConter = 1;
-	var maxTryConter = tryConter + 1;
-	
-	while (tryConter < maxTryConter){
+		
+	while (true) {
 
 		if (tryConter % 2 == 0) {
-		alert("Ход второго игрока. \nДля выхода введите: выход.");
+			alert("Ход второго игрока. \nДля выхода введите: выход.");
 		} else {
-		alert("Ход первого игрока. \nДля выхода введите: выход.");
+			alert("Ход первого игрока. \nДля выхода введите: выход.");
 		};
 
 		var userAnswer = prompt(" Угадайте число от 0 до 100.");
@@ -27,7 +27,6 @@
 		};
 
 		tryConter++;
-		maxTryConter++;
-	};
+	}
 	
 </script>
