@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function arr(n) {
+		arr = [];
+		for (i = 0; i < n; i++) {
+		var randomNumber = parseInt(Math.random() * 100);
+		arr.push(randomNumber);
+		};
+		return arr;
+	};
+
+	function sumArr(arr) {
+		for (var i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		};
+		return sum;
+	}
+
+	var n = +prompt("Введите количество элементов массива: ");
+	alert(arr(n));
+	alert(sumArr(n));
+
+	
+</script>
