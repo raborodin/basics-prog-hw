@@ -38,17 +38,27 @@
 		return minNumber;
 	};
 
-	var n = +prompt("Введите количество элементов массива: ");
+	function evenArrey(n) {
+		var evenArr = [];
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0) {
+				evenArr.push(arr[i]);
+			};
+		};
+		return evenArr;
+	};
+
+	var n = parseInt(prompt("Введите количество элементов массива: "));
 
 	alert("Массив из " + n + " - элементов: [" + randomArray(n) + "]");
-	
-	//myArray = randomArray(n);
 	
 	alert("Сумма всех элементов массива: " + sumArray(n));
 
 	alert("Максимальный элемент массива: " + maxNumber(n));
 
 	alert("Минимальный элемент массива: " + minNumber(n));
+
+	alert("Массив из четных элементов изначального массива: [" + evenArrey(n) + "]");
 
 	
 </script>
