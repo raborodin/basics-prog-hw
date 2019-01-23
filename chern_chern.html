@@ -10,15 +10,18 @@
 		return arr;
 	};
 
-	function sumArr(arr) {
+	function sumArr(n) {
+		var sum = 0;
 		for (var i = 0; i < arr.length; i++) {
-			sum += arr[i];
+			sum += array[i];
 		};
 		return sum;
-	}
+	};
 
 	var n = +prompt("Введите количество элементов массива: ");
-	alert(arr(n));
+
+	array = arr(n);
+	alert(array);
 	alert(sumArr(n));
 
 	
