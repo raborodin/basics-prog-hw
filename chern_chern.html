@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 	
-	function array(n) {
+	function randomArray(n) {
 		arr = [];
 		for (i = 0; i < n; i++) {
-		var randomNumber = parseInt(Math.random() * 100);
-		arr.push(randomNumber);
+			var randomNumber = parseInt(Math.random() * 100);
+			arr.push(randomNumber);
 		};
 		return arr;
 	};
@@ -18,13 +18,25 @@
 		return sum;
 	};
 
+	function maxNumber(myArray) {
+		var maxNumber = 0;
+		for (var i = 0; i < arr.length; i++) {
+			if (maxNumber < myArray[i]) {
+				maxNumber = myArray[i]
+			};
+		};
+		return maxNumber;
+	};
+
 	var n = +prompt("Введите количество элементов массива: ");
 
-	alert(array(n));
+	alert("Массив из " + n + " - элементов: [" + randomArray(n) + "]");
 	
-	myArray = array(n);
+	myArray = randomArray(n);
 	
-	alert(sumArray(n));
+	alert("Сумма всех элементов массива: " + sumArray(n));
+
+	alert(maxNumber(myArray));
 
 	
 </script>
