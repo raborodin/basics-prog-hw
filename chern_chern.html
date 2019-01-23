@@ -22,10 +22,20 @@
 		var maxNumber = 0;
 		for (var i = 0; i < arr.length; i++) {
 			if (maxNumber < myArray[i]) {
-				maxNumber = myArray[i]
+				maxNumber = myArray[i];
 			};
 		};
 		return maxNumber;
+	};
+	
+	function minNumber(n) {
+		var minNumber = 100;
+		for (var i = 0; i < arr.length; i++) {
+			if (minNumber > myArray[i]) {
+				minNumber = myArray[i];
+			};
+		};
+		return minNumber;
 	};
 
 	var n = +prompt("Введите количество элементов массива: ");
@@ -36,7 +46,9 @@
 	
 	alert("Сумма всех элементов массива: " + sumArray(n));
 
-	alert(maxNumber(n));
+	alert("Максимальный элемент массива: " + maxNumber(myArray));
+
+	alert("Минимальный элемент массива: " + minNumber(myArray));
 
 	
 </script>
