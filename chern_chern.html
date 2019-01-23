@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <script type="text/javascript">
 	
-	function arr(n) {
+	function array(n) {
 		arr = [];
 		for (i = 0; i < n; i++) {
 		var randomNumber = parseInt(Math.random() * 100);
@@ -10,19 +10,21 @@
 		return arr;
 	};
 
-	function sumArr(n) {
+	function sumArray(n) {
 		var sum = 0;
 		for (var i = 0; i < arr.length; i++) {
-			sum += array[i];
+			sum += myArray[i];
 		};
 		return sum;
 	};
 
 	var n = +prompt("Введите количество элементов массива: ");
 
-	array = arr(n);
-	alert(array);
-	alert(sumArr(n));
+	alert(array(n));
+	
+	myArray = array(n);
+	
+	alert(sumArray(n));
 
 	
 </script>
