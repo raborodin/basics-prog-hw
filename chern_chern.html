@@ -13,7 +13,7 @@
 	function sumArray(n) {
 		var sum = 0;
 		for (var i = 0; i < arr.length; i++) {
-			sum += myArray[i];
+			sum += arr[i];
 		};
 		return sum;
 	};
@@ -21,8 +21,8 @@
 	function maxNumber(n) {
 		var maxNumber = 0;
 		for (var i = 0; i < arr.length; i++) {
-			if (maxNumber < myArray[i]) {
-				maxNumber = myArray[i];
+			if (maxNumber < arr[i]) {
+				maxNumber = arr[i];
 			};
 		};
 		return maxNumber;
@@ -31,8 +31,8 @@
 	function minNumber(n) {
 		var minNumber = 100;
 		for (var i = 0; i < arr.length; i++) {
-			if (minNumber > myArray[i]) {
-				minNumber = myArray[i];
+			if (minNumber > arr[i]) {
+				minNumber = arr[i];
 			};
 		};
 		return minNumber;
@@ -42,13 +42,13 @@
 
 	alert("Массив из " + n + " - элементов: [" + randomArray(n) + "]");
 	
-	myArray = randomArray(n);
+	//myArray = randomArray(n);
 	
 	alert("Сумма всех элементов массива: " + sumArray(n));
 
-	alert("Максимальный элемент массива: " + maxNumber(myArray));
+	alert("Максимальный элемент массива: " + maxNumber(n));
 
-	alert("Минимальный элемент массива: " + minNumber(myArray));
+	alert("Минимальный элемент массива: " + minNumber(n));
 
 	
 </script>
