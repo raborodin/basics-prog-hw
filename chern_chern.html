@@ -2,12 +2,12 @@
 <script type="text/javascript">
 	
 	function randomArray(n) {
-		randomArray = [];
+		arr = [];
 		for (i = 0; i < n; i++) {
 			var randomNumber = parseInt(Math.random() * 100);
-			randomArray.push(randomNumber);
+			arr.push(randomNumber);
 		};
-		return randomArray;
+		return arr;
 	};
 
 	function sumArray(n) {
@@ -36,7 +36,7 @@
 	
 	alert("Сумма всех элементов массива: " + sumArray(n));
 
-	alert("Максимальный элемент массива: " + maxNumber(myArray));
+	alert(maxNumber(myArray));
 
 	
 </script>
