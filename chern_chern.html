@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	
 	function randomArray(n) {
-		arr = [];
+		var arr = [];
 		for (i = 0; i < n; i++) {
 			var randomNumber = parseInt(Math.random() * 100);
 			arr.push(randomNumber);
@@ -12,17 +12,17 @@
 
 	function sumArray(n) {
 		var sum = 0;
-		for (var i = 0; i < arr.length; i++) {
-			sum += arr[i];
+		for (var i = 0; i < newArray.length; i++) {
+			sum += newArray[i];
 		};
 		return sum;
 	};
 
 	function maxNumber(n) {
 		var maxNumber = 0;
-		for (var i = 0; i < arr.length; i++) {
-			if (maxNumber < arr[i]) {
-				maxNumber = arr[i];
+		for (var i = 0; i < newArray.length; i++) {
+			if (maxNumber < newArray[i]) {
+				maxNumber = newArray[i];
 			};
 		};
 		return maxNumber;
@@ -30,9 +30,9 @@
 	
 	function minNumber(n) {
 		var minNumber = 100;
-		for (var i = 0; i < arr.length; i++) {
-			if (minNumber > arr[i]) {
-				minNumber = arr[i];
+		for (var i = 0; i < newArray.length; i++) {
+			if (minNumber > newArray[i]) {
+				minNumber = newArray[i];
 			};
 		};
 		return minNumber;
@@ -40,25 +40,35 @@
 
 	function evenArrey(n) {
 		var evenArr = [];
-		for (var i = 0; i < arr.length; i++) {
-			if (arr[i] % 2 == 0) {
-				evenArr.push(arr[i]);
+		for (var i = 0; i < newArray.length; i++) {
+			if (newArray[i] % 2 == 0) {
+				evenArr.push(newArray[i]);
 			};
 		};
 		return evenArr;
 	};
 
-	var n = parseInt(prompt("Введите количество элементов массива: "));
+	while (true) {
+		var n = parseInt(prompt("Введите количество элементов массива: "));
+		if (isNaN(n) || n <= 0) {
+			alert("Введите положительное число цифрами!");
+		} else {
+			var newArray = randomArray(n);
 
-	alert("Массив из " + n + " - элементов: [" + randomArray(n) + "]");
+			/*alert("Массив из " + n + " - элементов: [" + newArray + "]");
+			alert("Сумма всех элементов массива: " + sumArray(n));
+			alert("Максимальный элемент массива: " + maxNumber(n));
+			alert("Минимальный элемент массива: " + minNumber(n));
+			alert("Массив из четных элементов изначального массива: [" + evenArrey(n) + "]");*/
+
+			document.write("Массив из " + n + " - элементов: [" + newArray + "] ");
+			document.write("<br /> Сумма всех элементов массива: " + sumArray(n));
+			document.write("<br /> Максимальный элемент массива: " + maxNumber(n));
+			document.write("<br /> Минимальный элемент массива: " + minNumber(n));
+			document.write("<br /> Массив из четных элементов изначального массива: [" + evenArrey(n) + "]");
+			break;
+		};
+	};
 	
-	alert("Сумма всех элементов массива: " + sumArray(n));
-
-	alert("Максимальный элемент массива: " + maxNumber(n));
-
-	alert("Минимальный элемент массива: " + minNumber(n));
-
-	alert("Массив из четных элементов изначального массива: [" + evenArrey(n) + "]");
-
 	
 </script>
