@@ -10,7 +10,7 @@
 		return arr;
 	};
 
-	function sumArray(n) {
+	function sumArray(newArray) {
 		var sum = 0;
 		for (var i = 0; i < newArray.length; i++) {
 			sum += newArray[i];
@@ -18,7 +18,7 @@
 		return sum;
 	};
 
-	function maxNumber(n) {
+	function maxNumber(newArray) {
 		var maxNumber = 0;
 		for (var i = 0; i < newArray.length; i++) {
 			if (maxNumber < newArray[i]) {
@@ -28,7 +28,7 @@
 		return maxNumber;
 	};
 	
-	function minNumber(n) {
+	function minNumber(newArray) {
 		var minNumber = 100;
 		for (var i = 0; i < newArray.length; i++) {
 			if (minNumber > newArray[i]) {
@@ -38,7 +38,7 @@
 		return minNumber;
 	};
 
-	function evenArrey(n) {
+	function evenArrey(newArray) {
 		var evenArr = [];
 		for (var i = 0; i < newArray.length; i++) {
 			if (newArray[i] % 2 == 0) {
@@ -56,10 +56,10 @@
 			var newArray = randomArray(n);
 
 			document.write("Массив из " + n + " - элементов: [" + newArray + "] ");
-			document.write("<br /> Сумма всех элементов массива: " + sumArray(n));
-			document.write("<br /> Максимальный элемент массива: " + maxNumber(n));
-			document.write("<br /> Минимальный элемент массива: " + minNumber(n));
-			document.write("<br /> Массив из четных элементов изначального массива: [" + evenArrey(n) + "]");
+			document.write("<br /> Сумма всех элементов массива: " + sumArray());
+			document.write("<br /> Максимальный элемент массива: " + maxNumber());
+			document.write("<br /> Минимальный элемент массива: " + minNumber();
+			document.write("<br /> Массив из четных элементов изначального массива: [" + evenArrey() + "]");
 			break;
 		};
 	};
