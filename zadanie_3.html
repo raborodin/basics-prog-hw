@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function puzzle (answer, userAnswer) {
+		userAnswer = userAnswer.toLowerCase();
+		if (answer == userAnswer) {
+			return counter++;
+		};
+	};
+
+	counter = 0;
+	
+	puzzle("капуста", prompt("Сто одежёк и все без застежёк."));
+	puzzle("лук", prompt("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает."));
+	puzzle("замок", prompt("Не лает, не кусает, в дом не пускает."));
+	
+	if (counter == 2||counter == 3) {
+		alert("Игра закончена.\nВы ответили правильно на " + counter + " загади.");
+	} else if (counter == 1) {
+		alert("Игра закончена.\nВы ответили правильно на " + counter + " загадку.");
+	} else {
+		alert("Игра закончена.\nВы ответили правильно на " + counter + " загадок.");
+	};
+
+</script>
