@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function array(n) {
+		var arr = [];
+		for (i = 1; i <= n; i++) {
+		arr.push(i)
+		};
+		return arr;
+	};
+	
+	while (true) {
+		n = prompt("Введите количество элементов массива: ");
+		if (isNaN(n) || n <= 0) {
+			alert("Введите положительное число цифрами!");
+		} else {
+			alert(array(n));
+			break;
+		};
+	};
+		
+	
+		
+		
+	
+		
+
+		
+
+</script>
